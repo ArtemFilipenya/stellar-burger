@@ -8,7 +8,7 @@ import { TOrder } from '@utils-types';
 import { RootState } from '../store';
 
 // Типизация состояния заказа по номеру
-type TOrderByNumberSliceState = {
+export type TOrderByNumberSliceState = {
   orders: TOrder[];
   orderIsLoading: boolean;
   error: string | undefined;
@@ -47,7 +47,7 @@ export const fetchOrderByNumber = createAsyncThunk<
 );
 
 // Создание слайса для заказов по номеру
-const orderByNumberSlice = createSlice({
+export const orderByNumberSlice = createSlice({
   name: 'orderByNumber',
   initialState,
   reducers: {},

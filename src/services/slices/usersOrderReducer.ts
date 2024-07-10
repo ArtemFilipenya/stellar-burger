@@ -3,7 +3,7 @@ import { getOrdersApi } from '@api';
 import { TOrder } from '@utils-types';
 import { RootState } from '../store';
 
-interface FeedSliceState {
+export interface FeedSliceState {
   userOrders: TOrder[];
   userOrdersIsLoading: boolean;
   error: string | null;

@@ -2,9 +2,9 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { TConstructorIngredient, TIngredient } from '@utils-types';
 
 // Функция для генерации уникального идентификатора
-const generateId = () => self.crypto.randomUUID();
+const generateId = () => globalThis.crypto.randomUUID();
 
-type TBurgerConstructorSlice = {
+export type TBurgerConstructorSlice = {
   constructorItems: {
     bun: TConstructorIngredient | null;
     ingredients: TConstructorIngredient[];
